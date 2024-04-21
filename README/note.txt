@@ -1,0 +1,8 @@
+renegotiation:
+	To force a complete SSL/TLS/DTLS session renegotiation, the current session should be invalidated prior to calling this method.
+	(see Java doc SSLEngine.beginHandshake())
+eg:
+	if(isRenigotiation){
+		sslEngine.getSession().invalidate();
+	}
+	sslEngine.beginHandshake();
